@@ -49,6 +49,14 @@ Guarda los cambios del área de preparación en el repositorio.
 - **con mensaje**: `git commit -m "Agrega nueva funcionalidad"`
 - **para modificar el último commit**: `git commit --amend -m "Mensaje corregido"`
 
+## `git branch`
+
+- **ver ramas**: `git branch`
+- **ver ramas locales y remotas**: `git branch -a`
+- **cambiar traqueado rama**:
+```git branch <local-branch-name> --set-upstream-to <remote-name>/<remote-branch-name>```
+- **crear rama remoto**: ```git push <remote-name> <local-branch-name>:<remote-branch-name>```
+
 ## `git switch` vs `git checkout`
 
 `git switch` es el comando moderno y específico para cambiar de rama,
