@@ -4,11 +4,10 @@ En este documento se enumeran y explican brevemente los principales y
 más usados comandos de git con sus correspondientes opciones,
 incluyendo ejemplos prácticos de uso.
 
-
 ## Control historia: `git status` y `git log`
 
-
 ### `git log`
+
 - `-n 10`
 - `-grahp`
 - `--nopager`
@@ -37,7 +36,6 @@ Establece la configuración para el usuario en todos los repositorios.
 - **`color.ui`**: Activa la coloración en la salida de comandos.
 
 ## `git add`
-
 
 - **básico**: `git add archivo.txt`
 - **interactivo**: `git add archivo.txt -p`
