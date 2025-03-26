@@ -56,6 +56,7 @@ Guarda los cambios del área de preparación en el repositorio.
 - **cambiar traqueado rama**:
 ```git branch <local-branch-name> --set-upstream-to <remote-name>/<remote-branch-name>```
 - **crear rama remoto**: ```git push <remote-name> <local-branch-name>:<remote-branch-name>```
+- **borrar rama en remoto**: ```git push origin --delete nombre-rama```
 
 ## `git switch` vs `git checkout`
 
