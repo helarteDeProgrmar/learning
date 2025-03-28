@@ -21,3 +21,9 @@ docker exec -it name_container bash
 ```
 mongosh
 ```
+
+## Atraer un puerto por ssh de un contenedor docker corriendo en servidor
+
+```
+ssh -L 1234:127.0.0.1:27017 server-name
+````
