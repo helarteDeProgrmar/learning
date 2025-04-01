@@ -151,6 +151,8 @@ Pensar que el remoto simplemente es un repositorio mas de git.
   - **Ejemplo**: `git push origin master`
 - **`git pull`**: Trae y fusiona cambios desde el repositorio remoto al local.
   - **Ejemplo**: `git pull origin master`
+- **subir bajar lo commiteado y añadir mis commits acontinuación**: `git pull --rebase`
+
 
 ## `git cherry-pick`
 
