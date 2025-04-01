@@ -80,6 +80,10 @@ Une el historial de dos ramas, integrando cambios de una rama en la actual.
 - **básico**: `git merge feature`
 - **con opción --no-ff**: `git merge --no-ff feature`
 
+Cuando hay conflictos:
+- **quedarse con cambios locales**: `git checkout --ours .`
+Después completar con `git add. && git commit`
+
 ## `git rebase`
 
 Te situas en la rama que quieres actualizar, por ejemplo desde feature1
