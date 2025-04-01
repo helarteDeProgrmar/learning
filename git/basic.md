@@ -160,6 +160,7 @@ otra rama a la rama actual, sin necesidad de hacer un merge completo.
 - **Ejemplo**: `git cherry-pick abc1234`  
   (para aplicar el commit identificado por `abc1234`)
 
+- **que en el commit aparezca que es cheery**: añadir el sigueinte flag `git cherry-pick abc1234 -x`
 ## `git stash`
 
 Guarda temporalmente cambios no confirmados
