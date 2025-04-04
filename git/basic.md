@@ -195,3 +195,11 @@ a "squash" en los commits que se quieran combinar.
 ## Worktrees
 
 - **para añadir un worktree**: `git worktree add ../ruta-nueva-rama develop`
+
+
+## Blame, ver historial
+
+- **ver historial de un fichero**: `git blame file-name`
+- **ver commit de una o varias lineas**: `git blame file-name -L 1,10`
+- **ver commit y metadatos de una linea**: `git blame file-name -L 1,1 --incremental`
+- **ver historial de un fichero**: `git log --follow -p [filename]`
