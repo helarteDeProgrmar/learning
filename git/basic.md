@@ -83,6 +83,7 @@ Une el historial de dos ramas, integrando cambios de una rama en la actual.
 
 Cuando hay conflictos:
 - **quedarse con cambios locales**: `git checkout --ours .`
+- **quedarse con cambios del rama que viene**: `git checkout --theirs .`
 Después completar con `git add. && git commit`
 
 ## `git rebase`
