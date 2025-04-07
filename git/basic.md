@@ -95,6 +95,11 @@ de esta rama.
 - **básico**: `git rebase master`
 - **interactivo para reordenar o combinar commits**: `git rebase -i HEAD~3`
 
+### Conflictos rebase
+
+- **parar, deshacer, abortar **: `git rebase --abort` tambien en problemas con `git pull --rebace`
+- **quedarse con locales**: 
+
 ## `git revert`
 
 Crea un nuevo commit que deshace los cambios de un commit anterior,
