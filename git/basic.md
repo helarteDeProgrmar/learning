@@ -187,12 +187,13 @@ a "squash" en los commits que se quieran combinar.
 
 ## `git tag`
 
-- **para crear un tag en el commit actual**: `git tags <tag-name>`
+- **para crear un tag en el commit actual**: `git tag <tag-name>`
 - **para crear un tag anotado**: `git tag -a v1.0 -m "Versión 1.0"`
 - **idem otra manera**: `git tag v1.0 -m "Versión 1.0"`
+- **para subir tags**: `git push --tags`
 - **para listar tags**: `git tag`
 - **para eliminar tags**: `git tag -d <tag>`
-- **para subir tags**: `git push --tags`
+- **para eliminar tags del remoto**: `git push <nombre-remote> --delete <tag>`
 
 ## `git bisect`
 
