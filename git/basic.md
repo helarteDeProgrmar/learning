@@ -185,7 +185,7 @@ Combina múltiples commits en uno solo para limpiar el historial del repositorio
 - **Ejemplo**: Utilizar `git rebase -i` y cambiar "pick"
 a "squash" en los commits que se quieran combinar.
 
-## `git tags`
+## `git tag`
 
 - **para crear un tag en el commit actual**: `git tags <tag-name>`
 - **para crear un tag anotado**: `git tag -a v1.0 -m "Versión 1.0"`
