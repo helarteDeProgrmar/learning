@@ -18,7 +18,7 @@ En caso de querer algo mas concreto: [manual de latex](https://manualdelatex.com
 $$ suma: a + b $$
 $$ producto: a * b $$
 $$ division: a / b $$
-$$ fraccion: a / b $$
+$$ fraccion: \frac{a}{b} $$
 $$ potencia: a ^ b $$
 $$ potencia larga: a ^ {b - c} $$
 
