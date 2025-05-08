@@ -58,6 +58,7 @@ Guarda los cambios del área de preparación en el repositorio.
 - **segun warning de git**: `git branch --set-upstream-to=<remote>/<branch> master`
 - **crear rama remoto**: ```git push <remote-name> <local-branch-name>:<remote-branch-name>```
 - **borrar rama en remoto**: ```git push origin --delete nombre-rama```
+- **ver ramas y su upsteam**: ```git branch -vv```
 
 ## `git switch` vs `git checkout`
 
