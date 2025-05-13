@@ -5,8 +5,10 @@ En este documento se intentara recoger lo basico de markdown.
 
 Un interesantisimo enlace que da la vida [detexify](https://detexify.kirelabs.org/classify.html)
 
-## Titulos
+## Titulos, negrita, cursiva
 
+**negrita**
+*cursiva*
 Trivial, leete el documento en plano
 
 ## Matematicas
