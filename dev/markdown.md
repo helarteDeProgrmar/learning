@@ -2,14 +2,7 @@
 
 En este documento se intentara recoger lo basico de markdown.
 
-
 Un interesantisimo enlace que da la vida [detexify](https://detexify.kirelabs.org/classify.html)
-
-## Titulos, negrita, cursiva
-
-**negrita**
-*cursiva*
-Trivial, leete el documento en plano
 
 ## Matematicas
 
@@ -35,6 +28,12 @@ $$f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}$$
 
 ### General
 
+## Titulos, negrita, cursiva
+
+**negrita**
+*cursiva*
+Trivial, leete el documento en plano
+
 ## Imagenes
 
 `knitr::include_graphics()`
@@ -42,7 +41,7 @@ $$f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}$$
 
 Parametros:
 
-```
+```md
 -fig.asp
 -fig.width
 -fig.height
