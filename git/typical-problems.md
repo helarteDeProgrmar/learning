@@ -7,6 +7,12 @@ Para solucionar este problema se puede visitar el enlace:
 https://support.atlassian.com/bitbucket-cloud/docs/resolve-merge-conflicts/
 ```
 
+## Borrar un fichero de la historia
+
+Ver el enlace y documentar mejor este punto proximamente:
+
+[enlace a pagina con info](https://dev.to/matiasfha/git-como-eliminar-un-archivo-de-la-historia-mpp)
+
 ## Ver diferencias entre ramas
 
 ```bash
