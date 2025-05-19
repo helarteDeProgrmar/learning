@@ -2,6 +2,10 @@
 
 ## zip
 
+Lo primero es comprobar la instalacion: `zip --version`
+Comprimir con: `zip -r directory directory.zip`
+Descomprimir con: `unzip archivo.zip -d direcction/to/descompress`
+
 ## rar
 
 **Usar la unrar:**
