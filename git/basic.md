@@ -208,6 +208,11 @@ a "squash" en los commits que se quieran combinar.
 
 - **para añadir un worktree**: `git worktree add ../ruta-nueva-rama develop`
 
+## Clone
+
+- **Clona repo de toda la vida** `git clone <repo-url>`
+- **Clona repo con nombre cambiado** `git clone <repo-url> <new-name>`
+
 ## Blame, ver historial
 
 - **ver historial de un fichero**: `git blame file-name`
