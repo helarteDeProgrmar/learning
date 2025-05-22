@@ -83,6 +83,7 @@ Une el historial de dos ramas, integrando cambios de una rama en la actual.
 - **con opción --no-ff**: `git merge --no-ff feature`
 
 Cuando hay conflictos:
+
 - **quedarse con cambios locales**: `git checkout --ours .`
 - **quedarse con cambios del rama que viene**: `git checkout --theirs .`
 Después completar con `git add. && git commit`
@@ -98,8 +99,9 @@ de esta rama.
 
 ### Conflictos rebase
 
-- **parar, deshacer, abortar **: `git rebase --abort` tambien en problemas con `git pull --rebace`
-- **quedarse con locales**: 
+- **parar, deshacer, abortar**: `git rebase --abort` tambien
+en problemas con `git pull --rebace`
+- **quedarse con locales**:
 
 ## `git revert`
 
@@ -161,7 +163,6 @@ Pensar que el remoto simplemente es un repositorio mas de git.
   - **Ejemplo**: `git pull origin master`
 - **subir bajar lo commiteado y añadir mis commits acontinuación**: `git pull --rebase`
 
-
 ## `git cherry-pick`
 
 Permite aplicar uno o varios commits específicos de
@@ -169,8 +170,9 @@ otra rama a la rama actual, sin necesidad de hacer un merge completo.
 
 - **Ejemplo**: `git cherry-pick abc1234`  
   (para aplicar el commit identificado por `abc1234`)
+- **que en el commit aparezca que es cheery**: añadir el sigueinte
+flag `git cherry-pick abc1234 -x`
 
-- **que en el commit aparezca que es cheery**: añadir el sigueinte flag `git cherry-pick abc1234 -x`
 ## `git stash`
 
 Guarda temporalmente cambios no confirmados
@@ -205,7 +207,6 @@ a "squash" en los commits que se quieran combinar.
 ## Worktrees
 
 - **para añadir un worktree**: `git worktree add ../ruta-nueva-rama develop`
-
 
 ## Blame, ver historial
 
