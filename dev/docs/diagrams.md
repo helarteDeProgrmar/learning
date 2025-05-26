@@ -36,3 +36,6 @@ Se puede usar el servicio:
 ![Diagrama UML](http://www.plantuml.com/plantuml/png/SoWkIImgAStDuU8pKiX9B2efIYp9oIajIyv9oSfFJ4vLiSF9oSpEIImkLdB8J4pICrB8oAjEKtEGjI2vAPYtH4S0)
 ```
 
+## Tikz
+
+Es un paquete de latex. Va bombeta
