@@ -52,3 +52,16 @@ Parametros:
 ## Enlaces
 
 [nombre del enlace](https://www.google.com) es un enlace a google
+
+## Hacer pdf
+
+Instalar pandoc y tex:
+
+```bash
+sudo dnf install pandoc
+sudo dnf install texlive-scheme-full
+sudo dnf install texlive-xetex # Si no viene en el full
+```
+
+Despues de la prueba resulta que no es muy util, pero teniendo latex
+para crear pdf nos bastara eso.
