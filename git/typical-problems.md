@@ -90,7 +90,7 @@ git diff <rama1> <rama1> -- <file_nanme>
 
 Estudiar cosas interesantes y dudas:
 
-- Los hash los crea a partir de los datos del commit y los anteriores.
+- Los hash los crea a partir de los datos del commit y los anteriores commits.
 Hay algun problema si cambio los metadatos?
 
 ```bash

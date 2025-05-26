@@ -13,6 +13,7 @@ incluyendo ejemplos prácticos de uso.
 - `--nopager`
 - `--oneline`
 - `-p`: ver las diferencias
+- `--pretty`: ver autor del commit
 
 ## Configuración: `git config`
 
