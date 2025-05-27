@@ -15,3 +15,19 @@ fichero a la historia pero su antigua version no te importa. Entonces
 usa:
 
 `git rm --cached ruta/al/fichero && git commit -m "stop tracking"`
+
+## Borrar fichero comprometedor de toda la historia
+
+Si has subido un fichero con tokens, deja de hacer lo que este haciendo
+y espabila:
+
+* Opcion 1: Investiga sobre BFG `bfg --delete-files ruta/al/fichero`
+* Opcion 2: Cargarte todo ->
+
+```bash
+git filter-branch --force \
+  --index-filter "git rm --cached --ignore-unmatch ruta/al/fichero" \
+  --prune-empty \
+  --tag-name-filter cat \
+  -- --all
+```
