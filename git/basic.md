@@ -89,6 +89,11 @@ Cuando hay conflictos:
 - **quedarse con cambios del rama que viene**: `git checkout --theirs .`
 Después completar con `git add. && git commit`
 
+Antes de probocar conflictos:
+
+- Mirar diferencias: `git diff rama1..rama2`
+- Ver que problemas van a existir: `git merge --no-commit --no-ff main`
+
 ## `git rebase`
 
 Te situas en la rama que quieres actualizar, por ejemplo desde feature1
