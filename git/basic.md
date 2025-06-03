@@ -29,6 +29,16 @@ Establece la configuración para el usuario en todos los repositorios.
 
 - **Ejemplo**: `git config --global user.email "manolocaracol@example.com"`
 
+### Ver la configuracion local
+
+```txt
+git config --local --list
+git config --list
+git config --global --list
+```
+
+O tambien verlo en los ficheros de configuracion: `.git/config`, `~/.gitconfig`
+
 ### Opciones interesantes
 
 - **`user.name`**: Define el nombre del usuario.
