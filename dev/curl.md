@@ -37,3 +37,11 @@ curl --connect-timeout 10 https://example.com # timeout conexion
 ```bash
 cat urls.txt | xargs -n 1 -P 4 curl -O # descarga paralelamente varios ficheros
 ```
+
+## Tipos de autenticaciones
+
+Tenemos los siguientes tipos de autenticaciones:
+
+- api-key: `  -H "api-key: mi-clave-secreta"`
+- bearer_auth:   `-H "Authorization: Bearer TU_TOKEN_AQUI"`
+- basic_auth:  `  -u usuario:contraseña`
