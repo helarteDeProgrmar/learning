@@ -8,6 +8,30 @@ Descomprimir con: `unzip archivo.zip -d direcction/to/descompress`
 
 ## rar
 
+**Isntalar rar**
+
+Bastante criminal la descarga que he hecho, pero
+funciona:
+
+```txt
+cd /tmp
+curl -O https://www.rarlab.com/rar/rarlinux-x64-621.tar.gz
+```
+
+
+```txt
+tar -xzf rarlinux-x64-621.tar.gz
+cd rar
+sudo install -v -m755 rar unrar /usr/local/bin
+```
+
+**Comprimir un archivo o carpeta**
+
+```txt
+rar a archivo.rar archivo.txt
+rar a archivo.rar carpeta/
+```
+
 **Usar la unrar:**
 
 `unrar x archivo.rar /ruta/al/final/dir`
