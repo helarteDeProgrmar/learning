@@ -22,3 +22,14 @@ Para sobrevivir aqui estan los comando basicos:
 | **Recargar configuración**        | `Mod+Shift+R`                                          |
 | **Cerrar sesión de i3**           | `Mod+Shift+E`                                          |
 
+### Brillo
+
+El mayor problema que he tenido hasta el momento es el brillo,
+para cambiarlo:
+
+```bash
+sudo apt install brightnessctl
+brightnessctl set +10% # subir
+brightnessctl set 10% # exacto
+brightnessctl set 10%- # bajar
+```
