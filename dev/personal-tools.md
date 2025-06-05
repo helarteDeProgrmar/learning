@@ -33,3 +33,12 @@ brightnessctl set +10% # subir
 brightnessctl set 10% # exacto
 brightnessctl set 10%- # bajar
 ```
+
+En la configuracion de i3 las teclas son las siguientes:
+
+| Nombre    | Significado                  |
+| --------- | ---------------------------- |
+| `Mod1`    | Tecla Alt                    |
+| `Mod4`    | Tecla Super (usualmente Win) |
+| `Control` | Tecla Ctrl                   |
+| `Shift`   | Tecla Shift                  |
