@@ -53,3 +53,11 @@ Mientras que si queremos relanzar todo debemos ejecutar:
 sudo mount -a -O _netdev
 ```
 
+## var/logs
+
+En este carpeta se escribes los logs del sistema es util para ver
+que ha fallado:
+
+```bash
+cat /var/log/syslog | grep mount
+```
