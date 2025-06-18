@@ -1,3 +1,7 @@
+# Directorios y sus buenas praticas linux
+
+## Panorama general
+
 | Carpeta          | Contenido principal                                                             |
 | ---------------- | ------------------------------------------------------------------------------- |
 | `/`              | Punto de entrada del sistema; sólo subdirectorios esenciales.                   |
@@ -27,3 +31,25 @@
 * `/usr/lib` (librerías)
 * `/usr/share` (archivos compartidos)          |
   \| `/usr/local`         | Software instalado manualmente (compilado o binarios de terceros) sin interferir con el gestor de paquetes. |
+
+## mnt
+
+Cuando se montan un sistemas de ficheros, por ejemplo un *NAS QNAP* o
+el disco de windows en un *dual boot*, se puede hacer que se monte automaticamente
+en `mnt`.
+
+Se pueden configurar el montaje en el fichero `/etc/fstab`, si da error siempre se
+podra volver a montar usando los siguientes comandos:
+
+Montar solo un sistema de ficheros:
+
+```bash
+sudo mount /mnt/nfs
+```
+
+Mientras que si queremos relanzar todo debemos ejecutar:
+
+```bash
+sudo mount -a -O _netdev
+```
+
