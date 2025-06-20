@@ -7,10 +7,11 @@ Para mas info sobre los comandos [docs](ttps://asdf-vm.com/manage/commands.html)
 
 ```bash
 asdf plugin list # ver plugins instalados
+asdf list elixir # ver versiones instaladas de plugin
 asdf plugin add elixir # puedes tener versiones de elixir
 asdf plugin add <name> [git-url] # puedes tener versiones de elixir
 asdf list-all elixir # lista las versiones disponibles
-asdf install elixir <version> # instal la version
+asdf install elixir <version> # instala la version
 asdf global elixir <version> # usa la version de forma predeterminada
 asdf local elixir <version> # usa la version en el directorio actual
 ```
