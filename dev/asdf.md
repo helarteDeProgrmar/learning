@@ -14,6 +14,7 @@ asdf list-all elixir # lista las versiones disponibles
 asdf install elixir <version> # instala la version
 asdf global elixir <version> # usa la version de forma predeterminada
 asdf local elixir <version> # usa la version en el directorio actual
+asdf current elixir # saber que version se esta utilizando
 ```
 
 
