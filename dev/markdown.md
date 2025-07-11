@@ -65,3 +65,24 @@ sudo dnf install texlive-xetex # Si no viene en el full
 
 Despues de la prueba resulta que no es muy util, pero teniendo latex
 para crear pdf nos bastara eso.
+
+## Emoticonos
+
+| Emoji | Significado           | Ejemplo de uso en Markdown                       |
+| :---: | :-------------------- | :----------------------------------------------- |
+|   🎯  | Objetivos / Alcance   | `## 🎯 Objetivos del proyecto`                   |
+|   📋  | Requisitos            | `### 📋 Requisitos funcionales`                  |
+|  🏗️  | Arquitectura          | `#### 🏗️ Diagrama de arquitectura`              |
+|   🔧  | Configuración         | `**🔧 Configuración inicial:**`                  |
+|   🚀  | Despliegue            | `- 🚀 Despliegue a producción`                   |
+|   🐛  | Errores / Bugs        | `> 🐛 Bug conocido: fallo al validar email`      |
+|   ✅   | Tareas completadas    | `- ✅ Implementar autenticación`                  |
+|   ⚙️  | Funcionalidad         | `###### ⚙️ Endpoints de la API`                  |
+|   🔒  | Seguridad             | `**🔒 Consideraciones de seguridad**`            |
+|  🛠️  | Herramientas          | `- 🛠️ Node.js v14, Docker`                      |
+|   📈  | Métricas / KPI        | `> 📈 Métrica: tiempo de respuesta < 200 ms`     |
+|   📝  | Notas / Documentación | `**📝 Nota:** usar variables de entorno`         |
+|   💡  | Ideas / Sugerencias   | `> 💡 Sugerencia: cachear respuestas frecuentes` |
+|   🔍  | Revisión / QA         | `### 🔍 Checklist de QA`                         |
+|   ⏰   | Cronograma / Fechas   | `- ⏰ Hito 1: 2025-08-01`                         |
+|   📌  | Punto importante      | `> 📌 Importante: actualizar dependencias`       |
