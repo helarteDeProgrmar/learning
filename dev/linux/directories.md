@@ -32,6 +32,17 @@
 * `/usr/share` (archivos compartidos)          |
   \| `/usr/local`         | Software instalado manualmente (compilado o binarios de terceros) sin interferir con el gestor de paquetes. |
 
+## `/usr/bin` , `/usr/local/bin`, `$HOME/.local/bin`
+
+Son directorios solo de lecturas. Sus diferencias residen en,
+quien las usa y que usuarios reales las usan
+
+El primero es para instalaciones basicas del sistema y basicas
+de usuario, comunes a todo el mundo (incluido el sistema), ej. `ls`
+El segundo es herramientas descargadas por el usuario como herramientas
+de uso propio, ej. `nvim`
+La tercera es para solo el usuario donde se aloje
+
 ## mnt
 
 Cuando se montan un sistemas de ficheros, por ejemplo un *NAS QNAP* o
