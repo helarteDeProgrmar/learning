@@ -70,6 +70,9 @@ Guarda los cambios del área de preparación en el repositorio.
 - **crear rama remoto**: ```git push <remote-name> <local-branch-name>:<remote-branch-name>```
 - **borrar rama en remoto**: ```git push origin --delete nombre-rama```
 - **ver ramas y su upsteam**: ```git branch -vv```
+- **rama protegida por remoto**: 
+    * bitbucket: Ve a `repo>repositoty settings>repository details>advanted` y
+    selecciona la rama principal. Despues ve a `branching model`
 
 ## `git switch` vs `git checkout`
 
