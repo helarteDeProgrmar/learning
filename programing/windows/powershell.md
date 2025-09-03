@@ -260,3 +260,51 @@ pedir confirmación.
 Ya hemos visto que el comando `Get-Process` nos da informacion de los procesos
 y nos proporciona sus ids. Para adquirir aun mas datos podemos ejecutar por
 ejemplo el siguiente comando: `Get-Process -Id 37224 | Format-List *`
+
+### nohup de windows
+
+---
+
+### 1. Usar `Start-Process` con `-NoNewWindow` y `-WindowStyle Hidden`
+
+Esto lanza el proceso sin depender de tu sesión:
+
+```powershell
+Start-Process python "C:\ruta\mi_script.py" -WindowStyle Hidden
+```
+
+Ese proceso seguirá vivo aunque cierres la consola.
+
+---
+
+### 2. Usar `Start-Job` (trabajos en segundo plano dentro de PowerShell)
+
+```powershell
+Start-Job -ScriptBlock { python C:\ruta\mi_script.py }
+```
+
+- El trabajo se queda en segundo plano, asociado a esa sesión de PowerShell.
+- Si cierras PowerShell, el job se muere (no es exactamente como `nohup`).
+- Puedes verlos con `Get-Job`, y sacar resultados con `Receive-Job`.
+
+---
+
+### 3. Usar `schtasks` para lanzar el script sin sesión
+
+Si lo que quieres es **total independencia de tu terminal**,
+puedes usar el Programador de Tareas:
+
+```powershell
+schtasks /Create /SC ONCE /TN "MiScriptPython" /TR "python C:\ruta\mi_script.py" /ST 00:00 /RU SYSTEM
+schtasks /Run /TN "MiScriptPython"
+```
+
+Eso lanza el script en segundo plano, aunque cierres sesión.
+
+---
+
+### 4. Usar `Start-Process` con redirección de salida (imitando `nohup`)
+
+```powershell
+Start-Process python "C:\ruta\mi_script.py" -RedirectStandardOutput "out.log" -RedirectStandardError "err.log" -NoNewWindow
+```
