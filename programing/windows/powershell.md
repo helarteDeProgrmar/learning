@@ -252,3 +252,11 @@ convención.
 pedir confirmación.
 
 ---
+
+## Comando interesantes para analizar
+
+### Procesos
+
+Ya hemos visto que el comando `Get-Process` nos da informacion de los procesos
+y nos proporciona sus ids. Para adquirir aun mas datos podemos ejecutar por
+ejemplo el siguiente comando: `Get-Process -Id 37224 | Format-List *`
