@@ -1,3 +1,5 @@
+# Powershell
+
 PowerShell es un shell orientado a objetos construido sobre .NET,
 pensado tanto para administración interactiva como para scripting avanzado.
 A continuación encontrarás un repaso de sus elementos fundamentales para
@@ -38,19 +40,24 @@ Get-Service |
 
 ## 2. Variables
 
-- **Declaración y asignación**:  
+- **Declaración y asignación**:
+
   ```powershell
   $nombre = "Juan"
   $contador = 0
   $pi = 3.1416
   ```
+
 - **Tipos dinámicos**: no necesitas declarar el tipo; PowerShell los infiere.
-- **Arrays**:  
+- **Arrays**:
+
   ```powershell
   $frutas = @("Manzana","Plátano","Cereza")
   $frutas += "Naranja"    # agrega un elemento
   ```
+
 - **Hash tables**:  
+
   ```powershell
   $persona = @{
     Nombre = "Ana"
@@ -58,6 +65,7 @@ Get-Service |
     País   = "España"
   }
   ```
+
 - **Variables automáticas**:  
   - `$PSVersionTable` (información de la versión)  
   - `$Error` (colección de errores)  
@@ -73,6 +81,7 @@ Get-Service |
 ## 3. Estructuras de control
 
 ### 3.1. Condicionales `if` / `elseif` / `else`
+
 ```powershell
 if ($edad -ge 18) {
   "Es mayor de edad"
@@ -86,6 +95,7 @@ else {
 ```
 
 ### 3.2. `switch`
+
 ```powershell
 switch ($estadoServicio) {
   'Running' { "El servicio está en ejecución"; break }
@@ -95,6 +105,7 @@ switch ($estadoServicio) {
 ```
 
 ### 3.3. Manejo de errores con `try`/`catch`/`finally`
+
 ```powershell
 try {
   Remove-Item "C:\noexisto.txt" -ErrorAction Stop
@@ -115,6 +126,7 @@ finally {
 ## 4. Bucles
 
 ### 4.1. `for`
+
 ```powershell
 for ($i = 0; $i -lt 5; $i++) {
   "Iteración $i"
@@ -122,6 +134,7 @@ for ($i = 0; $i -lt 5; $i++) {
 ```
 
 ### 4.2. `foreach` (statement)
+
 ```powershell
 foreach ($f in $frutas) {
   "Me gusta $f"
@@ -129,6 +142,7 @@ foreach ($f in $frutas) {
 ```
 
 ### 4.3. `ForEach-Object` (pipeline)
+
 ```powershell
 Get-Process | ForEach-Object {
   "{0} usa {1:N2} CPU" -f $_.Name, $_.CPU
@@ -136,6 +150,7 @@ Get-Process | ForEach-Object {
 ```
 
 ### 4.4. `while`
+
 ```powershell
 while ($contador -lt 3) {
   "contador = $contador"
@@ -144,6 +159,7 @@ while ($contador -lt 3) {
 ```
 
 ### 4.5. `do { } while` y `do { } until`
+
 ```powershell
 do {
   $valor = Get-Random -Minimum 1 -Maximum 10
@@ -162,13 +178,16 @@ PowerShell pasa **objetos .NET** entre cmdlets, no líneas de texto. Esto te per
 3. **Ordenar** con `Sort-Object Propiedad`  
 4. **Formatear** la salida con `Format-Table`, `Format-List`, etc.
 
-> **Tip**: antes de formatear, si vas a procesar datos en scripts, evita `Format-*` porque convierte objetos en texto. Úsalo solo para mostrar en pantalla.
+> **Tip**: antes de formatear, si vas a procesar datos en scripts, evita
+`Format-*` porque convierte objetos en texto. Úsalo solo para mostrar en
+pantalla.
 
 ---
 
 ## 6. Funciones, scripts y módulos
 
 ### 6.1. Definir funciones y parámetros
+
 ```powershell
 function Saludar {
   [CmdletBinding()]
@@ -185,10 +204,13 @@ function Saludar {
 ```
 
 ### 6.2. Creación de scripts
+
 - Guarda tus comandos en archivos `.ps1`.  
-- Ejecútalos con `.\script.ps1` (y asegura tu política de ejecución con `Set-ExecutionPolicy`).
+- Ejecútalos con `.\script.ps1` (y asegura tu política de ejecución con
+`Set-ExecutionPolicy`).
 
 ### 6.3. Módulos
+
 - Agrupa funciones en un archivo `.psm1` o en una carpeta de módulo.  
 - Usa `Export-ModuleMember -Function *` para exponerlas.  
 - Cárgalos con `Import-Module MiModulo`.
@@ -197,15 +219,19 @@ function Saludar {
 
 ## 7. Aliases y perfil de usuario
 
-- Los **aliases** (`gci`, `ls`, `dir`) simplifican la línea de comandos, pero en scripts es mejor usar el nombre completo del cmdlet.  
-- Personaliza tu entorno editando tu perfil en `$PROFILE` (p. ej. para añadir funciones, aliases o variables por defecto).
+- Los **aliases** (`gci`, `ls`, `dir`) simplifican la línea de comandos, pero
+en scripts es mejor usar el nombre completo del cmdlet.  
+- Personaliza tu entorno editando tu perfil en `$PROFILE` (p. ej. para añadir
+funciones, aliases o variables por defecto).
 
 ---
 
 ## 8. Buenas prácticas
 
-- **Nombres Verb-Noun**: `Get-Item`, `Set-Location`… en tus funciones usa esta convención.  
+- **Nombres Verb-Noun**: `Get-Item`, `Set-Location`… en tus funciones usa esta
+convención.  
 - **Comentarios de ayuda** en funciones:
+
   ```powershell
   <#
   .SYNOPSIS
@@ -216,10 +242,13 @@ function Saludar {
     Nombre de la persona.
   #>
   ```
-- **Parámetros seguros**: usa `[ValidateNotNullOrEmpty()]`, `[ValidateRange()]`, etc.  
+
+- **Parámetros seguros**: usa `[ValidateNotNullOrEmpty()]`, `[ValidateRange()]`
+, etc.  
 - **Streams de salida**:
   - `Write-Output` (salida normal)  
   - `Write-Error`, `Write-Warning`, `Write-Verbose`, `Write-Debug`  
-- **-WhatIf** y **-Confirm**: implementa en tus cmdlets para simular cambios y pedir confirmación.
+- **-WhatIf** y **-Confirm**: implementa en tus cmdlets para simular cambios y
+pedir confirmación.
 
 ---
