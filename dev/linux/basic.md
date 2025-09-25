@@ -22,3 +22,26 @@ dnf history # bastante top
 sudo dnf history undo <número_transacción>
 sudo dnf clean all # limpiar cache
 ```
+
+## globs
+
+| Patrón              | Qué hace                                     | Ejemplo que coincide                                                  |
+| ------------------- | -------------------------------------------- | --------------------------------------------------------------------- |
+| `*`                 | Cualquier número de caracteres (excepto `/`) | `foo*` → `foo`, `foobar`, `foo123`                                    |
+| `?`                 | Un solo carácter (excepto `/`)               | `?.txt` → `a.txt`, `b.txt`                                            |
+| `[abc]`             | Uno de los caracteres listados               | `file[123].txt` → `file1.txt`, `file2.txt`                            |
+| `[a-z]`             | Rango de caracteres                          | `file[a-c].txt` → `filea.txt`, `fileb.txt`                            |
+| `[^abc]` o `[!abc]` | Cualquier carácter excepto los listados      | `file[!0-9].txt` → `filex.txt` pero no `file5.txt`                    |
+| `**`                | Coincide recursivamente en subdirectorios    | `src/**/*.js` → encuentra todos los `.js` en `src/` y sus subcarpetas |
+
+### Especificacion de `*` y `**`
+
+Esto esta disponible en `zsh` y en `bash >= 4`
+
+| Patrón       | Qué hace                                                  | Coincide con                     | No coincide con                  |
+| ------------ | --------------------------------------------------------- | -------------------------------- | -------------------------------- |
+| `*`          | Cualquier cosa en el mismo nivel                          | `file1.txt`, `notes.md`          | `src/main.c`, `src/utils/test.c` |
+| `src/*`      | Archivos directos dentro de `src/`                        | `src/main.c`, `src/helper.c`     | `src/utils/test.c`               |
+| `src/**/*.c` | Todos los `.c` dentro de `src/`, sin importar profundidad | `src/main.c`, `src/utils/test.c` | `file1.txt`, `notes.md`          |
+| `**/*.txt`   | Todos los `.txt` en cualquier subdir                      | `file1.txt`                      | `src/main.c`                     |
+
