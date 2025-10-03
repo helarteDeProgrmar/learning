@@ -10,6 +10,22 @@ zip archivo.zip * -x "*.log"
 ```
 Descomprimir con: `unzip archivo.zip -d direcction/to/descompress`
 
+## tar
+
+La estructura basica es: `tar [opciones] archivo.tar archivos_o_directorios`
+
+Las opciones mas tipicas:
+
+| Opción | Significado                                       |
+| ------ | ------------------------------------------------- |
+| `-c`   | **Crear** un nuevo archivo tar (create)           |
+| `-x`   | **Extraer** archivos de un tar (extract)          |
+| `-t`   | **Listar** el contenido de un tar (list)          |
+| `-v`   | Modo **verbose**, muestra los archivos procesados |
+| `-f`   | Especifica el **nombre del archivo tar**          |
+| `-z`   | Comprimir/descomprimir con **gzip** (`.tar.gz`)   |
+| `-j`   | Comprimir/descomprimir con **bzip2** (`.tar.bz2`) |
+
 ## rar
 
 **Isntalar rar**
