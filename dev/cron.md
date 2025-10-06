@@ -91,3 +91,39 @@ sudo systemctl stop gnome-asdf
 
 Cuando veas el status, veras si esta activo, inactivo o *failed* (la ultima vez
 termino con error)
+
+## Alternativas a `cron`: `at`
+
+Al igual que `cron` depende del gran servicio de `systemctl`. Por ello para
+comprobar que corre correctamente hay que ejecutar:
+
+```bash
+systemctl status atd
+```
+
+En resumen tenemos lo siguiente:
+
+| Comando                | Función                             |
+| ---------------------- | ----------------------------------- |
+| `at [hora]`            | Programa una tarea                  |
+| `atq`                  | Lista las tareas pendientes         |
+| `atrm [id]`            | Elimina una tarea                   |
+| `systemctl status atd` | Verifica si el servicio está activo |
+
+hay que tener en cuenta el formato de la *"hora"*:
+
+| **Formato**              | **Ejemplo**             | **Significado**                                         |
+| ------------------------ | ----------------------- | ------------------------------------------------------- |
+| `HH:MM`                  | `14:30`                 | A las 2:30 PM de hoy (si la hora ya pasó, será mañana). |
+| `HH:MM YYYY-MM-DD`       | `14:30 2025-10-07`      | Fecha y hora exacta con año, mes y día.                 |
+| `HH:MM [AM/PM]`                    | `10:00 PM`                                              | Hora en formato de 12 h. |
+| `HH:MM tomorrow`         | `09:00 today`        | A las 9:00 de la mañana de mañana.                      |
+| `HH:MM + número [minutes/hours/days/weeks]` | `now + 2 hours` | Dentro de un tiempo relativo (2 h desde ahora). |
+| `now + tiempo`           | `now + 10 minutes`      | Ejecuta la tarea después del tiempo indicado.           |
+| `midnight`               | `midnight`              | A las 00:00 del próximo día.                            |
+| `noon`                   | `noon`                  | A las 12:00 del mediodía de hoy.                        |
+| `teatime`                | `teatime`               | A las 16:00 (4 PM) — valor simbólico clásico de UNIX.   |
+| `HH:MM MONTH DAY`        | `08:30 July 20`         | El 20 de julio a las 8:30.                              |
+| `HH:MM MONTH DAY YEAR`   | `08:30 July 20 2026`    | Fecha y hora completa con año.                          |
+| `MMDDYY`                 | `100625`                | 6 de octubre de 2025 a medianoche (00:00).              |
+| `MM/DD/YY` o `DD.MM.YY`  | `10/06/25` o `06.10.25` | Variantes aceptadas del formato de fecha.               |
