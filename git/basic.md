@@ -194,11 +194,29 @@ flag `git cherry-pick abc1234 -x`
 
 ## `git stash`
 
-Guarda temporalmente cambios no confirmados
-para poder trabajar en otra cosa sin perderlos.
+Guarda temporalmente cambios no confirmados para poder trabajar en otra cosa
+sin perderlos. Funciona como una pila, la idea es que los cambios vuelvan en
+el orden que fueron *stasheados* para evitar incompatibilidades.
+
+### Uso con normalidad
+
+- **guardar cambios**: `git stash`
+- **recuperar y eliminar de la pila**: `git stash pop`
+- **recuperar y sin eliminar de la pila**: `git stash apply`
+- **mostar informacion**: `git stash show`, `git stash list --pretty=oneline`
+- gracias al comando anterior podremos saber el identificador, para aplicar un
+cambio: `git stash apply <hash de stash>`
+
+### Algunos mas especificos
 
 - **para guardar cambios**: `git stash save "trabajo en progreso"`
 - **para aplicar y eliminar el último stash**: `git stash pop`
+- **para borrar cabeza**: es interesante ver que aparece toda la info del stash
+
+```txt
+❯ git stash drop
+Dropped refs/stash@{0} (bd5e132dd5a98275db1905cc5488bd0b6775bb38)
+```
 
 ## `git squash`
 
