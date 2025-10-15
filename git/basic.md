@@ -267,3 +267,4 @@ a "squash" en los commits que se quieran combinar.
 | Restaurar estado de un commit   | `git reset --hard <commit>`                |
 | Crear rama desde commit perdido | `git branch <nombre> <commit>`             |
 | Limpiar reflog viejo            | `git reflog expire --expire=30.days --all` |
+| Alternativa a `reset commit`    | `git checkuot <c>`&`gsw main`&`git merge`  |
