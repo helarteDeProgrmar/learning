@@ -256,3 +256,14 @@ a "squash" en los commits que se quieran combinar.
 - **ver commit de una o varias lineas**: `git blame file-name -L 1,10`
 - **ver commit y metadatos de una linea**: `git blame file-name -L 1,1 --incremental`
 - **ver historial de un fichero**: `git log --follow -p [filename]`
+
+## Reflog
+
+| Acción                          | Comando                                    |
+| ------------------------------- | ------------------------------------------ |
+| Ver reflog                      | `git reflog`                               |
+| Recuperar commit perdido        | `git checkout <commit>`                    |
+| Restaurar estado anterior       | `git reset --hard HEAD@{n}`                |
+| Restaurar estado de un commit   | `git reset --hard <commit>`                |
+| Crear rama desde commit perdido | `git branch <nombre> <commit>`             |
+| Limpiar reflog viejo            | `git reflog expire --expire=30.days --all` |
