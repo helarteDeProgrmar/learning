@@ -21,6 +21,7 @@ sudo dnf groupinstall "Development Tools" # Se pueden instalar grupos de paquete
 dnf history # bastante top
 sudo dnf history undo <número_transacción>
 sudo dnf clean all # limpiar cache
+dnf install /ruta/a/archivo/paquete.rmp # Instalar a partir de un paquete descargado
 ```
 
 ## globs
