@@ -46,3 +46,12 @@ git lfs ls-files
 ```bash
 git lfs prune
 ```
+
+### Mas comandos utiles
+
+| Comando                                    | Qué hace                                                 |
+| ------------------------------------------ | -------------------------------------------------------- |
+| `git lfs env`                              | Muestra configuración y rutas de LFS                     |
+| `git lfs status`                           | Muestra qué archivos están pendientes de subir o cambiar |
+| `git lfs fetch --all`                      | Descarga todos los objetos LFS del remoto                |
+| `git lfs migrate import --include="*.pdf"` | Convierte archivos existentes del repo normal a LFS      |
