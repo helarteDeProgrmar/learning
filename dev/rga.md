@@ -74,8 +74,7 @@ Sirve para directorios o proyectos mucho mas grandes. Es una alternativa a
 
 ## rga
 
-Para buscar en distintos ficheros igual que si fuese rg
-podemos usar `rga`
+Para buscar en distintos ficheros igual que si fuese rg podemos usar `rga`
 
 ### Instalacion
 
