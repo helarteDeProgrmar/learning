@@ -22,6 +22,7 @@ dnf history # bastante top
 sudo dnf history undo <número_transacción>
 sudo dnf clean all # limpiar cache
 dnf install /ruta/a/archivo/paquete.rmp # Instalar a partir de un paquete descargado
+rmp -q nombre_paquete # Verificar si tenemos un paquete instalado
 ```
 
 ## globs
