@@ -3,6 +3,13 @@
 En este fichero ire completando cosas que vaya aprendiendo basicas de linux y
 algunos comandos curiosos.
 
+## Soluciones frecuentes ante errores del sistema
+
+### Abrir terminal en modo seguro cuando hay error del sistema
+
+Si el ordenador se queda bloqueado en el proceso de levantar servicios, podemos
+inciiar una consola con el atajo de teclado: `Ctrl+Alt+F3`
+
 ## `dnf`
 
 Empecemos como no por el gestor de paquetes:
