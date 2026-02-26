@@ -65,6 +65,9 @@ grep -r "TODO" /ruta/codigo/
 
 # 8. Excluir líneas que coincidan
 grep -v "DEBUG" archivo.log
+
+# 9. Usar regex en la busqueda
+grep -E "tu_regex" nombre_del_archivo
 ```
 
 ## rg
