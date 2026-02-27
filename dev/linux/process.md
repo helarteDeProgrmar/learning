@@ -74,3 +74,12 @@ Un **proceso zombi** (también conocido como **defunct**) es un proceso que ya h
 
 En resumen, los **huérfanos** son procesos vivos cuyo padre ha muerto, mientras que los **zombis** son procesos muertos cuyo padre aún no ha leído su estado de salida.
 
+## Comando practicos para estudiar
+
+```bash
+sleep 300 &
+jobs
+fg %1
+bg %1
+disown
+```

@@ -1,5 +1,14 @@
 # Docker
 
+## Definiciones clave
+
+- docker
+- docker compose
+- dockerhub
+- contenerdor
+- imagen
+- volumen
+
 ## Manejo de las imagenes y dockerhub
 
 ```bash
