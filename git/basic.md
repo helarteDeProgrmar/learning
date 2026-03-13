@@ -249,6 +249,7 @@ a "squash" en los commits que se quieran combinar.
 
 - **Clona repo de toda la vida** `git clone <repo-url>`
 - **Clona repo con nombre cambiado** `git clone <repo-url> <new-name>`
+- **Clona repo solo con un tag** `git clone --branch <tag> --single-branch <repo-url>`
 
 ## Blame, ver historial
 
