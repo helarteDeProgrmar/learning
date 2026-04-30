@@ -37,6 +37,10 @@ find /ruta -type f -group staff
 
 # 8. Eliminar archivos vacíos
 find /ruta -type f -empty -delete
+
+# 9. Ejecutar algo por cada archivo o pasar como una lista
+find . -iname "dune" -exec cat {} \;
+find . -iname "dune" -exec cat {} + # solo cambia el +
 ```
 
 ### grep
